@@ -1,0 +1,21 @@
+.app{
+    width: 100vw;
+    height: 100vh;
+}
+
+.login-block{
+    width: auto;
+    // @include center(both);
+}
+
+label{
+    display: block;
+    color: #fff;
+}
+
+.form-control{
+    min-height: 34px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+

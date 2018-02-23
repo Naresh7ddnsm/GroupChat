@@ -1,0 +1,207 @@
+.chat-container{
+    height: calc(100vh - 300px);
+    position: relative;
+    top: 100px;
+}
+
+.chat-container > .row, .chat-container > .row > [class*='grid']{
+    height: 100%;
+}
+
+.users-block{
+    background: #fff;
+    height: 100%;
+    border-radius: 5px;
+}
+.profile{
+    .display-name{
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .display-pic{
+        @include box(100px, 100px);
+        border-radius: 50%;
+        background: #5a1937;
+        color: #fff;
+        overflow: hidden;
+        text-align: center;
+        line-height: 100px;
+        margin: 20px auto 0;
+        font-size: 50px;
+    }
+}
+.members{
+    ul{
+        list-style: none;
+        li{
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+    }
+    .thumb{
+        display: inline-block;
+        @include box(30px, 30px);
+        border-radius: 50%;
+        background: #ddd;
+        text-align: center;
+        line-height: 30px;
+        font-size: 14px;
+        margin-right: 15px;
+        position: relative;
+        top: -4px;
+    }
+    .users-title{
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+}
+
+.chat-block{
+    position: relative;
+    border-radius: 5px;
+    height: 100%;
+    background: #fff;
+    .conversation{
+        position: relative;
+        overflow: hidden;
+    }
+    ul{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+        list-style: none;
+    }
+}
+
+.conversation{
+    height: calc(100% - 140px);
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    .chat{
+        margin-bottom: 30px;
+    }
+}
+.chat{
+    text-align: right;
+    position: relative;
+    .user-thumb{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #000;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+        margin-right: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .chat-message{
+        margin-right: 80px;
+        text-align: right;
+        position: relative;
+        span{
+            font-size: 14px;
+            display: inline-block;
+            max-width: 300px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    }
+    &.current-user{
+        text-align: left;
+        .user-thumb{
+            left: 0;
+        }
+        .chat-message{
+            margin-left: 60px;
+            margin-right: 0;
+            text-align: left;
+            span{
+                background: #ddf;
+            }
+        }
+    }
+}
+
+
+.chat-message:after, .chat-message:before {
+	left: calc(100% - 1px);
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.chat-message:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #fff;
+	border-width: 5px;
+	margin-top: -5px;
+}
+.chat-message:before {
+	border-color: rgba(221, 221, 221, 0);
+	border-left-color: #ddd;
+	border-width: 6px;
+	margin-top: -6px;
+}
+
+.current-user .chat-message:after,.current-user .chat-message:before{
+    right: 100%;
+    top: 50%;
+    left: auto;
+}
+
+.current-user .chat-message:after{
+    border-left-color: transparent;
+    border-right-color: #ddf;
+	border-width: 5px;
+	margin-top: -5px
+}
+.current-user .chat-message:before{
+    border-left-color: transparent;
+    border-right-color: #ddd;
+	border-width: 6px;
+	margin-top: -6px;
+}
+
+.chat-form{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .textarea{
+        width: 100%;
+        resize: none;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        padding-left: 20px;
+        padding-right: 20px;
+        outline: none;
+        height: 40px;
+        border-radius: 20px;
+        line-height: 40px;
+    }
+    .btn-send{
+        cursor: pointer;
+        outline: none;
+        @include box(40px, 40px);
+        border-radius: 50%;
+        border: none;
+        background: #581837 url('../images/sent-mail.png') no-repeat center center;
+        display: block;
+        text-indent: -9999px;
+        background-size: 60% 60%;
+        
+    }
+}

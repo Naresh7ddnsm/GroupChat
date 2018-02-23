@@ -1,0 +1,50 @@
+.thumbnail{
+	max-width: 100%;
+}
+.media{
+	margin-bottom: rem(15px);
+}
+.media-details {
+	.thumbnail{
+		float:left;
+		margin-right: rem(20px);
+	}
+	.thumbnail-s{
+		width: rem(60px)
+	}
+	.thumbnail-m{
+		width: rem(100px)
+	}
+	.thumbnail-l{
+		width: rem(140px)
+	}
+	.media-title{
+		font-weight: $wb;
+		margin-bottom: rem(5px);
+	}
+	a{
+		text-decoration: none;
+		color: $link-color-black;
+	}
+	p{
+		@include font-size(14px);
+		color: #666;
+	}
+}
+.media-tile{
+	.thumbnail{
+		margin-bottom: rem(15px);
+	}
+	.media-title{
+		font-weight: $wb;
+		margin-bottom: rem(5px);
+	}
+	a{
+		text-decoration: none;
+		color: $link-color-black;
+	}
+	p{
+		@include font-size(14px);
+		color: #666;
+	}
+}

@@ -1,0 +1,8 @@
+@each $point in map-keys($grid-breakpoints){
+	$min : map-get($grid-breakpoints, $point);
+	$media : "screen";
+	@if ($min != 0) {
+		$media : "(min-width:"+$min+")";
+	}
+	@include _boxModal($media, $point);
+}

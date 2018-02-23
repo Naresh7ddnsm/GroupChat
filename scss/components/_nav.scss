@@ -1,0 +1,59 @@
+.navbar{
+	display: block;
+	min-height: rem(54px);
+	background: $navBarBg;
+	position: relative;
+	font-weight: $wl;
+}
+.navbar-header{
+	float:left;
+}
+.nav-brand{
+	display: block;
+	height: rem(54px);
+	font-weight: $wb;
+	color: #fff;
+	font-style: italic;
+	@include padding(rem(5px), rem(30px), rem(5px), null);
+	line-height: rem(22px);
+}
+.navbar-nav{
+	float: left;
+	.nav-item{
+		list-style: none;
+		float: left;
+		text-transform: uppercase;
+	}
+}
+.navbar-nav a{
+	@include padding(rem(16px), rem(12px), rem(16px), rem(12px));
+	line-height: rem(22px);
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	@include font-size(14px);
+}
+
+.navbar-right{
+	float: right;
+}
+.navbar-form {
+	@include margin(rem(10px), rem(10px), null, null);
+	.form-group{
+		display: inline-block;
+	}
+	.btn{
+		padding :0;
+		padding-right: rem(10px);
+		padding-left: rem(10px);
+	}
+}
+.userbar a{
+	@include padding(rem(15px), null, rem(15px), null);
+	line-height: rem(22px);
+	min-height: rem(54px);
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	@include font-size(14px);
+}

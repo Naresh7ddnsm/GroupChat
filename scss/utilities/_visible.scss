@@ -1,0 +1,90 @@
+
+.hide{
+	display: none;
+}
+.show{
+	display: inherit;
+}
+@mixin _vis(){
+	$vis : "";
+	@each $point in map-keys($grid-breakpoints){
+		$vis : "#{$vis}, .visible-#{$point}, .hidden-#{$point}, .visible-#{$point}-only";
+	}
+	#{$vis} {
+		display: none;
+	}
+}
+
+@include _vis();
+
+@each $point in map-keys($grid-breakpoints){
+	$min : map-get($grid-breakpoints, $point);
+	$media : "screen";
+	@if ($min != 0) {
+		$media : "(min-width:"+$min+")";
+	}
+	@media #{$media}{
+		.visible-#{$point}{
+			display: block;
+		}
+		.hidden-#{$point}{
+			display: none;
+		}
+	}
+}
+@media #{$media-xxs-only}{
+	.visible-xxs-only{
+		display: inherit;
+	}
+	.hidden-xxs-only{
+		display: none;
+	}
+}
+@media #{$media-xs-only}{
+	.visible-xs-only{
+		display: inherit;
+	}
+	.hidden-xs-only{
+		display: none;
+	}
+}
+@media #{$media-sm-only}{
+	.visible-sm-only{
+		display: inherit;
+	}
+	.hidden-sm-only{
+		display: none;
+	}
+}
+@media #{$media-md-only}{
+	.visible-md-only{
+		display: inherit;
+	}
+	.hidden-md-only{
+		display: none;
+	}
+}
+@media #{$media-lg-only}{
+	.visible-lg-only{
+		display: inherit;
+	}
+	.hidden-lg-only{
+		display: none;
+	}
+}
+@media #{$media-xl-only}{
+	.visible-xl-only{
+		display: inherit;
+	}
+	.hidden-xl-only{
+		display: none;
+	}
+}
+@media #{$media-hd-only}{
+	.visible-hd-only{
+		display: inherit;
+	}
+	.hidden-hd-only{
+		display: none;
+	}
+}

@@ -1,0 +1,38 @@
+.container{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: ($grid-gutter-width / 2);
+	padding-right: ($grid-gutter-width / 2);
+}
+.row{
+	margin-left: -($grid-gutter-width / 2);
+	margin-right: -($grid-gutter-width / 2);
+}
+
+@each $point in map-keys($grid-breakpoints){
+	$container-size : map-get($container-width, $point);
+	$screen-size : map-get($grid-breakpoints, $point);
+	$media : screen;
+	@if($container-size != 0){
+		$media : "(min-width:"+$screen-size+")";
+		@media #{$media}{
+			.container, .container-#{$point}-fixed{
+				width: $container-size
+			}
+			.container-#{$point}-flex{
+				width: 100%;
+			}
+		}
+		.container-#{$point}-max{
+			max-width: $container-size
+		}
+	}
+}
+.container-flex{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: ($grid-gutter-width / 2);
+	padding-right: ($grid-gutter-width / 2);
+}

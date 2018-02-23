@@ -1,0 +1,39 @@
+%grid-column {
+	position: relative;
+	width: 100%;
+	min-height: rem(1px);
+	padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+}
+[class*="grid-"]{
+	padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+}
+.row-thin [class*="grid-"]{
+	padding-left:  rem(4px);
+    padding-right: rem(4px);
+}
+.row-small [class*="grid-"]{
+	padding-left:  ($grid-gutter-width / 3);
+    padding-right: ($grid-gutter-width / 3);
+}
+.row-big [class*="grid-"]{
+	padding-left:  $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+}
+@each $point in map-keys($grid-breakpoints){
+	@for $i from 1 through $grid-columns {
+		.grid-#{$point}-#{$i} {
+			@extend %grid-column;
+		}
+	}
+	$min : map-get($grid-breakpoints, $point);
+	$media : "screen";
+	@if ($min != 0) {
+		$media : "(min-width:"+$min+")";
+	}
+	@include _grid-generator($point, $media);
+}
+
+
+

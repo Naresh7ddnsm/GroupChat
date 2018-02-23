@@ -1,0 +1,17 @@
+.breadcrumb{
+	@include padding(rem(15px),null,rem(15px),null);
+	li{
+		display: inline-block;
+		color: $bc-inactive-color;
+		font-weight: $wl;
+	}
+	li + li:before {
+		content: '/';
+		display: inline-block;
+		@include margin(null, rem(10px), null, rem(10px));
+	}
+	a {
+		text-decoration: none;
+		color: $bc-active-color;
+	}
+}

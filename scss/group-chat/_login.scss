@@ -1,0 +1,44 @@
+
+.header{
+    h2{
+        color: #fff;
+        font-size: 36px;
+        text-transform: uppercase;
+        span{
+            font-weight: 100;
+            font-size: 38px;
+        }
+        img{
+            width: 50px;
+            margin-right: 20px;
+            vertical-align: middle;
+        }
+    }
+}
+.login-block{
+    label{
+        font-size: 18px;
+        font-weight: 100;
+    }
+    .form-control{
+        min-height: 42px;
+        background: #3E153A;
+        border: 1px solid rgba(255,255,255, 0.5);
+        color: #fff;
+        font-weight: 300;   
+    }
+    .btn{
+        display:inline-block;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        background: #571837;
+        border: 1px solid #6b2044;
+        border-radius: 3px;
+        color: #fff;
+        &:hover{
+            background: #24113D;
+            border-color: #33204f;
+        }
+    }
+}

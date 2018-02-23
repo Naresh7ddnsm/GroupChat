@@ -1,0 +1,60 @@
+
+@mixin float-grid-columns($screen) {
+	$list: "";
+	@for $i from 1 through $grid-columns {
+		$list: "#{$list}, .grid-#{$screen}-#{$i}";
+	}
+	#{$list} {
+		float: left;
+	}
+}
+
+@mixin grid-columns($screen, $type, $index){
+	@if ($type == width) {
+		.grid-#{$screen}-#{$index} {
+			width: percentage(($index / $grid-columns));
+		}
+	}
+	@if ($type == push) {
+		.grid-#{$screen}-push-#{$index} {
+			left: percentage(($index / $grid-columns));
+		}
+	}
+	@if ($type == pull) {
+		.grid-#{$screen}-pull-#{$index} {
+			right: percentage(($index / $grid-columns));
+		}
+	}
+	@if ($type == offset) {
+		.grid-#{$screen}-offset-#{$index} {
+			margin-left: percentage(($index / $grid-columns));
+		}
+	}
+	@if ($type == padding){
+		.grid-#{$screen}-padding-#{$index} {
+			margin-left: percentage(($index / $grid-columns));
+		}
+	}
+}
+
+@mixin loop-grid($screen, $type){
+	$init: 1;
+	@if ($type != width){
+		$init: 0;
+	} @else {
+		$init: 1;
+	}
+	@for $i from $init through $grid-columns {
+		@include grid-columns($screen, $type, $i);
+	}
+}
+
+@mixin _grid-generator($point, $media){
+	@media #{$media}{
+		@include float-grid-columns($point);
+		@include loop-grid($point, width);
+		@include loop-grid($point, push);
+		@include loop-grid($point, pull);
+		@include loop-grid($point, offset);
+	}
+}
