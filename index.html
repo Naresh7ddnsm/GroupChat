@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head>
+      <meta charset = "UTF-8" >
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>React | Group Chat</title>
+      <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+      <link href="./dist/css/app.css" rel="stylesheet"/>
+   </head>
+   <body>
+       <div class='container-fluid'>
+            <div id="app" class='app'>
+                <div class='container container-md-max'>
+                    <div class='login-block hide'>
+                        <div class='header mb-xxs-40'>
+                            <h2><img src='dist/images/sent-mail.png' alt='sentbox'><span>Send</span>box</h2>
+                        </div>
+                        <div class='form-group mb-xxs-30'>
+                            <label>Email</label>
+                            <input type='email' name='email' ref='email' class='form-control' id='email'/>
+                        </div>
+                        <div class='form-group mb-xxs-30'>
+                            <label>Password</label>
+                            <input type='password' name='password' ref='password' class='form-control' id='password'/>
+                        </div>
+                        <div class='form-group'>
+                            <div class='btn-group'>
+                                <span class='btn btn-md'>Login</span>
+                                <span class='btn btn-md'>Sign Up</span>
+                            </div>
+                        </div>
+                    </div>
+                    <section id='chat-container' class='chat-container clearfix'>
+                        <div class='header mb-xxs-40'>
+                            <h2><img src='dist/images/sent-mail.png' alt='sentbox'><span>Send</span>box</h2>
+                        </div>
+                        <div class="row">
+                            <div class='grid-lg-4'>
+                                <div class='users-block'>
+                                    <div class='profile mb-md-20 p-md-20'>
+                                        <p class='display-name'>Naresh Guptha</p>
+                                        <div class='display-pic'>N</div>
+                                    </div>
+                                    <div class='members p-md-20'>
+                                        <div class='users-title'>User List</div>
+                                        <ul>
+                                            <li><span class='thumb'>U</span>User1@gmail.com</li>
+                                            <li><span class='thumb'>U</span>User2@gmail.com</li>
+                                            <li><span class='thumb'>U</span>User3@gmail.com</li>
+                                            <li><span class='thumb'>U</span>User4@gmail.com</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='grid-lg-8'>
+                                <div class='chat-block pt-md-20'>
+                                    <div class='p-md-20 conversation' id='conversation'>
+                                        <ul>
+                                            <li class='chat'>
+                                                <div class='user-thumb'>N</div>
+                                                <div class='chat-message'>
+                                                    <span>Hi, How R u?</span>
+                                                </div>
+                                            </li>
+                                            <li class='chat current-user'>
+                                                <div class='user-thumb'>N</div>
+                                                <div class='chat-message arrow arrow-left'>
+                                                    <span>Hi, How R u?</span>
+                                                </div>
+                                            </li>
+                                            <li class='chat'>
+                                                <div class='user-thumb'>N</div>
+                                                <div class='chat-message'>
+                                                    <span>Hi, How R u? nslds l  d kkldsakld sd klsdm klsdkls </span>
+                                                </div>
+                                            </li>
+                                            <li class='chat current-user'>
+                                                <div class='user-thumb'>N</div>
+                                                <div class='chat-message'>
+                                                    <span>Hi, How R u?</span>
+                                                </div>
+                                            </li>
+                                            <li class='chat'>
+                                                <div class='user-thumb'>N</div>
+                                                <div class='chat-message'>
+                                                    <span>Hi, How R u?</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class='chat-form ph-md-40'>
+                                        <form>
+                                            <div class='row'>
+                                                <div class='grid-lg-10 pr-md-10'>
+                                                    <div class='pl-md-20'>
+                                                        <input  type='text' class='messaage textarea'></textarea>    
+                                                    </div>
+                                                </div>
+                                                <div class='grid-lg-2'>
+                                                    <button type='submit' class='btn-send'>Send</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>                
+            </div>
+       </div>
+      <script src = "./dist/bundle.js"></script>
+   </body>
+   
+</html>
