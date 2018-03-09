@@ -5913,15 +5913,15 @@ body, html, * {
 
 /* line 6, scss/group-chat/_base.scss */
 body {
-  background: #5a1937;
+  background: #2D3444;
   /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #5a1937 0%, #22113d 100%);
+  background: -moz-linear-gradient(-45deg, #2D3444 0%, #274470 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #5a1937 0%, #22113d 100%);
+  background: -webkit-linear-gradient(-45deg, #2D3444 0%, #274470 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #5a1937 0%, #22113d 100%);
+  background: linear-gradient(135deg, #2D3444 0%, #274470 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a1937', endColorstr='#22113d',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2D3444', endColorstr='#274470',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
   overflow: hidden; }
 
@@ -5972,131 +5972,213 @@ label {
     margin-right: 20px;
     vertical-align: middle; }
 
-/* line 19, scss/group-chat/_login.scss */
-.login-block label {
-  font-size: 18px;
-  font-weight: 100; }
+/* line 18, scss/group-chat/_login.scss */
+.login-block {
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  background: #fff; }
+  /* line 24, scss/group-chat/_login.scss */
+  .login-block label {
+    font-size: 18px;
+    font-weight: 300;
+    color: #000; }
+  /* line 29, scss/group-chat/_login.scss */
+  .login-block .form-control {
+    min-height: 42px;
+    border: 1px solid #ddd;
+    color: #888;
+    font-weight: 300; }
+  /* line 35, scss/group-chat/_login.scss */
+  .login-block .btn {
+    float: left;
+    width: calc(50% - 5px);
+    margin: 0;
+    text-align: center;
+    background: #3d74f5;
+    border: 1px solid #1b4d88;
+    border-radius: 3px;
+    color: #fff; }
+    /* line 44, scss/group-chat/_login.scss */
+    .login-block .btn:nth-child(2) {
+      margin-left: 10px; }
+    /* line 47, scss/group-chat/_login.scss */
+    .login-block .btn:hover, .login-block .btn:focus {
+      background: #1b4d88;
+      border-color: #1b4d88; }
 
-/* line 23, scss/group-chat/_login.scss */
-.login-block .form-control {
-  min-height: 42px;
-  background: #3E153A;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  color: #fff;
-  font-weight: 300; }
-
-/* line 30, scss/group-chat/_login.scss */
-.login-block .btn {
-  display: inline-block;
-  width: 100%;
-  margin: 0;
-  text-align: center;
-  background: #571837;
-  border: 1px solid #6b2044;
-  border-radius: 3px;
-  color: #fff; }
-  /* line 39, scss/group-chat/_login.scss */
-  .login-block .btn:hover {
-    background: #24113D;
-    border-color: #33204f; }
-
-/* line 1, scss/group-chat/_chat-block.scss */
+/* line 2, scss/group-chat/_chat-block.scss */
 .chat-container {
-  height: calc(100vh - 300px);
-  position: relative;
-  top: 100px; }
+  height: calc(100vh - 150px);
+  position: relative; }
 
-/* line 7, scss/group-chat/_chat-block.scss */
+@media (min-width: 100rem) {
+  /* line 7, scss/group-chat/_chat-block.scss */
+  .chat-container {
+    height: calc(100vh - 300px);
+    top: 100px; } }
+
+/* line 12, scss/group-chat/_chat-block.scss */
+.chat__wrapper {
+  background: #fff; }
+
+/* line 15, scss/group-chat/_chat-block.scss */
 .chat-container > .row, .chat-container > .row > [class*='grid'] {
   height: 100%; }
 
-/* line 11, scss/group-chat/_chat-block.scss */
-.users-block {
-  background: #fff;
-  height: 100%;
-  border-radius: 5px; }
+/* line 18, scss/group-chat/_chat-block.scss */
+.users-block--bg {
+  background: #282C35; }
 
-/* line 17, scss/group-chat/_chat-block.scss */
+/* line 22, scss/group-chat/_chat-block.scss */
+.users-block {
+  height: 100%; }
+
+/* line 25, scss/group-chat/_chat-block.scss */
+.display__cap {
+  font-size: 14px;
+  color: #888; }
+
+/* line 29, scss/group-chat/_chat-block.scss */
+.userinfo {
+  border-top: 1px solid #f1f1f1;
+  margin-top: 20px;
+  padding-top: 20px;
+  text-align: left; }
+  /* line 34, scss/group-chat/_chat-block.scss */
+  .userinfo__list {
+    font-size: 14px;
+    min-height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #f1f1f1;
+    color: #888888; }
+    /* line 40, scss/group-chat/_chat-block.scss */
+    .userinfo__list:last-child {
+      border-bottom: 0; }
+  /* line 44, scss/group-chat/_chat-block.scss */
+  .userinfo label {
+    display: inline-block;
+    width: 30%;
+    color: #333;
+    font-size: 14px;
+    position: relative; }
+  /* line 51, scss/group-chat/_chat-block.scss */
+  .userinfo label:after {
+    content: ':';
+    position: absolute;
+    right: 10px;
+    top: 0; }
+
+/* line 59, scss/group-chat/_chat-block.scss */
 .profile .display-name {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: bold; }
 
-/* line 21, scss/group-chat/_chat-block.scss */
+/* line 63, scss/group-chat/_chat-block.scss */
 .profile .display-pic {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: #5a1937;
+  background: #0084FF url("../images/user1.jpg") no-repeat center center;
+  background-size: cover;
   color: #fff;
   overflow: hidden;
   text-align: center;
   line-height: 100px;
-  margin: 20px auto 0;
-  font-size: 50px; }
+  margin: 20px auto 15px;
+  font-size: 50px;
+  text-indent: 500px; }
 
-/* line 34, scss/group-chat/_chat-block.scss */
+/* line 79, scss/group-chat/_chat-block.scss */
 .members ul {
   list-style: none; }
-  /* line 36, scss/group-chat/_chat-block.scss */
+  /* line 81, scss/group-chat/_chat-block.scss */
   .members ul li {
     font-size: 14px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
     margin-bottom: 15px; }
 
-/* line 41, scss/group-chat/_chat-block.scss */
+/* line 88, scss/group-chat/_chat-block.scss */
 .members .thumb {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: #ddd;
+  background: #ccc;
   text-align: center;
-  line-height: 30px;
-  font-size: 14px;
+  line-height: 50px;
+  font-size: 20px;
   margin-right: 15px;
   position: relative;
-  top: -4px; }
+  top: -4px;
+  float: left; }
 
-/* line 53, scss/group-chat/_chat-block.scss */
-.members .users-title {
-  font-weight: 700;
-  font-size: 18px;
-  text-transform: uppercase;
-  margin-bottom: 20px; }
+/* line 101, scss/group-chat/_chat-block.scss */
+.users-search {
+  display: block;
+  margin: 10px 0 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333; }
+  /* line 106, scss/group-chat/_chat-block.scss */
+  .users-search input {
+    border-radius: 18px;
+    background: #363D45;
+    padding-left: 35px;
+    color: #888;
+    font-size: 14px; }
 
-/* line 61, scss/group-chat/_chat-block.scss */
+/* line 115, scss/group-chat/_chat-block.scss */
+.userhint * {
+  font-size: 14px; }
+
+/* line 118, scss/group-chat/_chat-block.scss */
+.userhint__name {
+  color: #fff;
+  text-transform: capitalize; }
+
+/* line 122, scss/group-chat/_chat-block.scss */
+.userhint__lastmessage {
+  color: #888; }
+
+/* line 126, scss/group-chat/_chat-block.scss */
+.chat-block--bg {
+  background: #EEEFF3; }
+
+/* line 129, scss/group-chat/_chat-block.scss */
 .chat-block {
   position: relative;
-  border-radius: 5px;
-  height: 100%;
-  background: #fff; }
-  /* line 66, scss/group-chat/_chat-block.scss */
+  height: 100%; }
+  /* line 132, scss/group-chat/_chat-block.scss */
   .chat-block .conversation {
     position: relative;
     overflow: hidden; }
-  /* line 70, scss/group-chat/_chat-block.scss */
+  /* line 136, scss/group-chat/_chat-block.scss */
   .chat-block ul {
     width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
     padding: 20px;
-    list-style: none; }
+    list-style: none;
+    height: 100%;
+    overflow-y: auto; }
 
-/* line 80, scss/group-chat/_chat-block.scss */
+/* line 148, scss/group-chat/_chat-block.scss */
 .conversation {
-  height: calc(100% - 140px);
+  height: calc(100% - 100px);
   width: 100%;
   overflow: hidden;
   overflow-y: auto; }
-  /* line 85, scss/group-chat/_chat-block.scss */
+  /* line 153, scss/group-chat/_chat-block.scss */
   .conversation .chat {
     margin-bottom: 30px; }
 
-/* line 89, scss/group-chat/_chat-block.scss */
+/* line 157, scss/group-chat/_chat-block.scss */
 .chat {
   text-align: right;
   position: relative; }
-  /* line 92, scss/group-chat/_chat-block.scss */
+  /* line 160, scss/group-chat/_chat-block.scss */
   .chat .user-thumb {
     width: 40px;
     height: 40px;
@@ -6110,35 +6192,38 @@ label {
     position: absolute;
     right: 0;
     top: 0; }
-  /* line 106, scss/group-chat/_chat-block.scss */
+  /* line 174, scss/group-chat/_chat-block.scss */
   .chat .chat-message {
     margin-right: 80px;
     text-align: right;
     position: relative; }
-    /* line 110, scss/group-chat/_chat-block.scss */
+    /* line 178, scss/group-chat/_chat-block.scss */
     .chat .chat-message span {
       font-size: 14px;
       display: inline-block;
       max-width: 300px;
       padding: 10px;
       border: 1px solid #ddd;
-      border-radius: 5px; }
-  /* line 119, scss/group-chat/_chat-block.scss */
+      border-radius: 5px;
+      background: #0084FF;
+      color: #fff; }
+  /* line 189, scss/group-chat/_chat-block.scss */
   .chat.current-user {
     text-align: left; }
-    /* line 121, scss/group-chat/_chat-block.scss */
+    /* line 191, scss/group-chat/_chat-block.scss */
     .chat.current-user .user-thumb {
       left: 0; }
-    /* line 124, scss/group-chat/_chat-block.scss */
+    /* line 194, scss/group-chat/_chat-block.scss */
     .chat.current-user .chat-message {
       margin-left: 60px;
       margin-right: 0;
       text-align: left; }
-      /* line 128, scss/group-chat/_chat-block.scss */
+      /* line 198, scss/group-chat/_chat-block.scss */
       .chat.current-user .chat-message span {
-        background: #ddf; }
+        background: #fff;
+        color: #000; }
 
-/* line 136, scss/group-chat/_chat-block.scss */
+/* line 207, scss/group-chat/_chat-block.scss */
 .chat-message:after, .chat-message:before {
   left: calc(100% - 1px);
   top: 50%;
@@ -6147,48 +6232,49 @@ label {
   height: 0;
   width: 0;
   position: absolute;
-  pointer-events: none; }
+  pointer-events: none;
+  z-index: 1000; }
 
-/* line 147, scss/group-chat/_chat-block.scss */
+/* line 219, scss/group-chat/_chat-block.scss */
 .chat-message:after {
   border-color: rgba(255, 255, 255, 0);
-  border-left-color: #fff;
+  border-left-color: #0084FF;
   border-width: 5px;
   margin-top: -5px; }
 
-/* line 153, scss/group-chat/_chat-block.scss */
+/* line 225, scss/group-chat/_chat-block.scss */
 .chat-message:before {
   border-color: rgba(221, 221, 221, 0);
-  border-left-color: #ddd;
+  border-left-color: #fff;
   border-width: 6px;
   margin-top: -6px; }
 
-/* line 160, scss/group-chat/_chat-block.scss */
+/* line 232, scss/group-chat/_chat-block.scss */
 .current-user .chat-message:after, .current-user .chat-message:before {
-  right: 100%;
+  right: calc(100% - 1px);
   top: 50%;
   left: auto; }
 
-/* line 166, scss/group-chat/_chat-block.scss */
+/* line 238, scss/group-chat/_chat-block.scss */
 .current-user .chat-message:after {
   border-left-color: transparent;
-  border-right-color: #ddf;
+  border-right-color: #fff;
   border-width: 5px;
   margin-top: -5px; }
 
-/* line 172, scss/group-chat/_chat-block.scss */
+/* line 244, scss/group-chat/_chat-block.scss */
 .current-user .chat-message:before {
   border-left-color: transparent;
   border-right-color: #ddd;
   border-width: 6px;
   margin-top: -6px; }
 
-/* line 179, scss/group-chat/_chat-block.scss */
+/* line 251, scss/group-chat/_chat-block.scss */
 .chat-form {
   position: absolute;
   bottom: 0;
   width: 100%; }
-  /* line 183, scss/group-chat/_chat-block.scss */
+  /* line 255, scss/group-chat/_chat-block.scss */
   .chat-form .textarea {
     width: 100%;
     resize: none;
@@ -6200,7 +6286,7 @@ label {
     height: 40px;
     border-radius: 20px;
     line-height: 40px; }
-  /* line 195, scss/group-chat/_chat-block.scss */
+  /* line 267, scss/group-chat/_chat-block.scss */
   .chat-form .btn-send {
     cursor: pointer;
     outline: none;
@@ -6208,7 +6294,7 @@ label {
     height: 40px;
     border-radius: 50%;
     border: none;
-    background: #581837 url("../images/sent-mail.png") no-repeat center center;
+    background: #606D7D url("../images/sent-mail.png") no-repeat center center;
     display: block;
     text-indent: -9999px;
     background-size: 60% 60%; }

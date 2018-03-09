@@ -16,29 +16,37 @@
     }
 }
 .login-block{
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    background: #fff;
     label{
         font-size: 18px;
-        font-weight: 100;
+        font-weight: 300;
+        color: #000;
     }
     .form-control{
         min-height: 42px;
-        background: #3E153A;
-        border: 1px solid rgba(255,255,255, 0.5);
-        color: #fff;
-        font-weight: 300;   
+        border: 1px solid #ddd;
+        color: #888;
+        font-weight: 300;  
     }
     .btn{
-        display:inline-block;
-        width: 100%;
+        float: left;
+        width: calc(50% - 5px);
         margin: 0;
         text-align: center;
-        background: #571837;
-        border: 1px solid #6b2044;
+        background: #3d74f5;
+        border: 1px solid #1b4d88;
         border-radius: 3px;
         color: #fff;
-        &:hover{
-            background: #24113D;
-            border-color: #33204f;
+        &:nth-child(2){
+            margin-left: 10px;
+        }
+        &:hover,&:focus{
+            background: #1b4d88;
+            border-color: #1b4d88;
         }
     }
 }
